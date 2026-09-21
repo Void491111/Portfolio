@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import ProjectCover from "./ProjectCover";
 import StatusPill from "./StatusPill";
 import TagList from "@/components/ui/TagList";
@@ -10,7 +10,7 @@ export default function ProjectCard({ project }) {
       href={`/projects/${project.slug}`}
       className="group flex h-full flex-col overflow-hidden rounded-2xl border border-neutral-200 bg-white transition-shadow duration-500 hover:shadow-[0_8px_40px_rgba(0,0,0,0.08)]"
     >
-      <div className="relative aspect-16/10 overflow-hidden border-b border-neutral-100 bg-neutral-50">
+      <div className="relative aspect-16/10 overflow-hidden border-b border-neutral-100 bg-canvas">
         <ProjectCover project={project} className="transition-transform duration-700 ease-out group-hover:scale-[1.03]" />
       </div>
       <div className="flex flex-1 flex-col p-5">

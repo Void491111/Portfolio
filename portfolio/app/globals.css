@@ -54,3 +54,6 @@ html {
   .glitch::before,
   .glitch::after { display: none; }
 }
+@theme {
+  --color-canvas: #f7f7f6;
+}

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import Image from "next/image";
 import { AnimatePresence, motion } from "motion/react";
 import { useEffect } from "react";
@@ -25,7 +25,7 @@ export default function Lightbox({ image, isOpen, onClose }) {
   return (
     <AnimatePresence>
       {isOpen && (
-        <motion.div className="fixed inset-0 z-[60] flex items-center justify-center bg-white/95 p-4 backdrop-blur-sm sm:p-10" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={LIGHTBOX.backdrop} onClick={onClose}>
+        <motion.div className="fixed inset-0 z-[60] flex items-center justify-center bg-canvas/95 p-4 backdrop-blur-sm sm:p-10" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={LIGHTBOX.backdrop} onClick={onClose}>
           <button type="button" onClick={onClose} className="absolute right-4 top-4 rounded-full border border-neutral-300 bg-white px-4 py-2 text-sm transition-colors hover:border-neutral-950">
             {LIGHTBOX.closeLabel}
           </button>

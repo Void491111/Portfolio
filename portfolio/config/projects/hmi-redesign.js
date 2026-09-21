@@ -2,16 +2,34 @@
   slug: "hmi-redesign",
   title: "HMI Screen Redesign",
   year: "2025",
-  status: "In progress",
-  role: "UI/UX designer",
+  role: "UI/UX design intern",
   layout: "default",
-  summary: "Redesigned HMI screens for production machines to make operation clearer and faster. Design only, built in Figma.",
-  stack: ["Figma"],
+  summary:
+    "Redesign of the HMI screens on automated PCB production machines, done in Figma during my internship at PT Satnusa Persada.",
+  stack: ["Figma", "Auto Layout"],
   cover: null,
   links: [],
   sections: [
-    { heading: "Problem", body: ["\u2014"] },
-    { heading: "Redesign", body: ["\u2014"] },
+    {
+      heading: "Context",
+      body: [
+        "I interned at PT Satnusa Persada, where the production floor runs automated machines that assemble PCBs. Each machine is driven through its own HMI screen, and those screens are what an operator looks at for an entire shift.",
+      ],
+    },
+    {
+      heading: "Problem",
+      body: [
+        "The screens had collected controls over the years. Buttons sat wherever there was space, so an operator had to hunt for the one they needed, and anything unfamiliar meant stopping to ask someone. Engineers running program tests went through the same screens and hit the same wall.",
+      ],
+    },
+    {
+      heading: "Redesign",
+      body: [
+        "I rebuilt the layout in Figma as a clean interface on a white background. Controls are grouped by what they do rather than by when they were added, and color carries one meaning per function, so the color of a control tells you what kind of action it performs before you read its label.",
+        "The screens are built with auto layout, so spacing and alignment come from the component instead of from nudging things by hand. That kept the grouping consistent from one screen to the next, and trying a different arrangement cost a few minutes rather than a rebuild.",
+        "The goal was for an operator, a technician, or an engineer mid-test to find the right control without being shown where it is.",
+      ],
+    },
   ],
   gallery: [],
 };

@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono } from "next/font/google";
+﻿import { Geist, Geist_Mono } from "next/font/google";
 import Navbar from "@/components/layout/Navbar";
 import { SITE } from "@/config/site";
 import "./globals.css";
@@ -11,7 +11,7 @@ export const metadata = { title: SITE.title, description: SITE.description };
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
-      <body className="bg-white font-sans text-neutral-950 antialiased">
+      <body className="bg-canvas font-sans text-neutral-950 antialiased">
         <Navbar />
         {children}
       </body>
