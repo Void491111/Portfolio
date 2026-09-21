@@ -46,9 +46,11 @@ export const PROJECTS_SECTION = {
 export const CONTACT = { heading: "Let's build something." };
 
 export const SOCIALS = [
-  { label: "GitHub", href: "https://github.com/username" },
-  { label: "LinkedIn", href: "https://linkedin.com/in/username" },
-  { label: "Instagram", href: "https://instagram.com/username" },
+  { label: "GitHub", href: "https://github.com/Void491111" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/alif-hidayat-salim-109457274" },
+  { label: "Instagram", href: "https://www.instagram.com/alifsalim_049" },
 ];
+
+
 
 

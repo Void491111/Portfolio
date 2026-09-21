@@ -8,7 +8,7 @@ export const MOOISTE_POS = {
   layout: "wide",
   summary:
     "Full remake of Mooiste as a cafe point-of-sale: counter orders, kitchen queue, stock, cash closing, reports, and table QR ordering.",
-  stack: ["Next.js", "TypeScript", "Express", "Prisma", "Supabase", "Tailwind CSS"],
+  stack: ["Next.js", "TypeScript", "NestJS", "Prisma", "Supabase", "Tailwind CSS"],
   cover: IMG + "kasir-cart.webp",
   links: [],
   sections: [
@@ -90,3 +90,4 @@ export const MOOISTE_POS = {
     { src: IMG + "tutup-kas-input.webp", caption: "Counting the drawer" },
   ],
 };
+

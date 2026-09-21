@@ -2,6 +2,7 @@
   slug: "arc-robot-control",
   title: "Arc Articulated Robot Control",
   year: "2025",
+  status: "In progress",
   role: "Mobile developer",
   layout: "default",
   summary: "Flutter mobile app for controlling an arc articulated robot on the production floor.",
@@ -9,8 +10,8 @@
   cover: null,
   links: [],
   sections: [
-    { heading: "Overview", body: ["Jelasin robotnya buat apa dan kenapa kontrolnya dipindah ke mobile."] },
-    { heading: "Control flow", body: ["Jelasin fitur kontrol utama dan cara app komunikasi ke robot."] },
+    { heading: "Overview", body: ["\u2014"] },
+    { heading: "Control flow", body: ["\u2014"] },
   ],
   gallery: [],
 };

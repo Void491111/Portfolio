@@ -1,6 +1,7 @@
 import Reveal from "@/components/ui/Reveal";
 import SectionLabel from "@/components/ui/SectionLabel";
 import ProjectCard from "./ProjectCard";
+import PlaceholderCard from "./PlaceholderCard";
 import { PROJECTS, CARD_LAYOUT } from "@/config/projects";
 import { PROJECTS_SECTION } from "@/config/site";
 
@@ -15,15 +16,14 @@ export default function Projects() {
         <div className="mt-12 grid gap-4 md:grid-cols-3">
           {PROJECTS.map(function renderProject(project, index) {
             return (
-              <Reveal
-                key={project.slug}
-                delay={index * 0.08}
-                className={CARD_LAYOUT[project.layout] ?? CARD_LAYOUT.default}
-              >
+              <Reveal key={project.slug} delay={index * 0.08} className={CARD_LAYOUT[project.layout] ?? CARD_LAYOUT.default}>
                 <ProjectCard project={project} />
               </Reveal>
             );
           })}
+          <Reveal delay={PROJECTS.length * 0.08}>
+            <PlaceholderCard />
+          </Reveal>
         </div>
       </div>
     </section>
