@@ -2,7 +2,7 @@ export const SITE = {
   name: "Alif Hidayat",
   title: "Alif Hidayat — Frontend Developer",
   description: "Frontend developer from Batam building web and mobile apps.",
-  email: "email@kamu.com",
+  email: "voidw87@gmail.com",
 };
 
 export const NAV_LINKS = [
