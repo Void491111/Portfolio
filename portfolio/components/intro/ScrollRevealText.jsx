@@ -1,8 +1,25 @@
 "use client";
-import { motion, useTransform } from "motion/react";
+import { useRef } from "react";
+import { useScroll } from "motion/react";
+import ScrollWord from "./ScrollWord";
 import { SCROLL_TEXT } from "@/config/motion";
 
-export default function ScrollWord({ children, progress, range }) {
-  const opacity = useTransform(progress, range, [SCROLL_TEXT.dimOpacity, 1]);
-  return <motion.span style={{ opacity }} className="mr-[0.25em]">{children}</motion.span>;
+export default function ScrollRevealText({ text, className = "" }) {
+  const containerRef = useRef(null);
+  const { scrollYProgress } = useScroll({ target: containerRef, offset: SCROLL_TEXT.offset });
+  const words = text.split(" ");
+
+  return (
+    <p ref={containerRef} className={`flex flex-wrap ${className}`}>
+      {words.map(function renderWord(word, index) {
+        const start = index / words.length;
+        const end = start + 1 / words.length;
+        return (
+          <ScrollWord key={`${word}-${index}`} progress={scrollYProgress} range={[start, end]}>
+            {word}
+          </ScrollWord>
+        );
+      })}
+    </p>
+  );
 }
