@@ -24,7 +24,7 @@ export const HERO = {
 
 export const INTRO = {
   label: "About",
-  text: "I'm Alif, from Politeknik Negeri Batam. My main work is web apps, with some mobile in Flutter from my time at PT Satnusa Persada, and UI design in Figma. Right now I'm looking for a team where I can keep learning and ship real products.",
+  text: "I'm Alif, from Politeknik Negeri Batam. Mostly web apps, plus some Flutter work on a factory floor and UI design in Figma. I'm looking for a team where I can keep learning and ship real products.",
   terminal: [
     { type: "cmd", text: "whoami" },
     { type: "out", text: "alif hidayat · frontend developer" },
@@ -50,6 +50,7 @@ export const SOCIALS = [
   { label: "LinkedIn", href: "https://www.linkedin.com/in/alif-hidayat-salim-109457274" },
   { label: "Instagram", href: "https://www.instagram.com/alifsalim_049" },
 ];
+
 
 
 
