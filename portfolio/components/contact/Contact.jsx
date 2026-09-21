@@ -1,33 +1,51 @@
-import Reveal from "@/components/ui/Reveal";
+﻿import Reveal from "@/components/ui/Reveal";
+import SectionLabel from "@/components/ui/SectionLabel";
+import EmailLink from "./EmailLink";
+import CopyEmail from "./CopyEmail";
+import LocalTime from "./LocalTime";
+import SocialLinks from "./SocialLinks";
+import FooterColumn from "./FooterColumn";
+import Watermark from "./Watermark";
 import { SITE, CONTACT, SOCIALS } from "@/config/site";
+import { FOOTER } from "@/config/footer";
 
 export default function Contact() {
+  const copyright = `\u00a9 ${new Date().getFullYear()} ${SITE.name}`;
+
   return (
-    <section id="contact" className="border-t border-neutral-200 px-4 py-24 sm:px-8">
+    <section id="contact" className="relative overflow-hidden border-t border-neutral-200 px-4 pt-24 sm:px-8">
       <div className="mx-auto max-w-5xl">
         <Reveal>
-          <h2 className="text-3xl font-semibold tracking-tight sm:text-5xl">{CONTACT.heading}</h2>
+          <SectionLabel>{FOOTER.label}</SectionLabel>
+        </Reveal>
+        <Reveal delay={0.05}>
+          <h2 className="mt-3 max-w-2xl text-3xl font-semibold tracking-tight sm:text-5xl">{CONTACT.heading}</h2>
         </Reveal>
         <Reveal delay={0.1}>
-          <a href={`mailto:${SITE.email}`} className="mt-6 inline-block text-lg underline decoration-neutral-300 underline-offset-4 transition-colors hover:decoration-neutral-950">
-            {SITE.email}
-          </a>
+          <p className="mt-4 max-w-md text-neutral-600">{FOOTER.subheading}</p>
         </Reveal>
-        <Reveal delay={0.15}>
-          <ul className="mt-8 flex flex-wrap gap-5 text-sm text-neutral-600">
-            {SOCIALS.map(function renderSocial(social) {
-              return (
-                <li key={social.href}>
-                  <a href={social.href} target="_blank" rel="noreferrer" className="transition-colors hover:text-neutral-950">
-                    {social.label} ↗
-                  </a>
-                </li>
-              );
-            })}
-          </ul>
+
+        <Reveal delay={0.15} className="mt-10 flex flex-wrap items-center gap-4">
+          <EmailLink email={SITE.email} />
+          <CopyEmail email={SITE.email} />
         </Reveal>
-        <p className="mt-16 font-mono text-xs text-neutral-400">© {new Date().getFullYear()} {SITE.name}</p>
+
+        <Reveal delay={0.2} className="mt-20 grid gap-8 border-t border-neutral-200 pt-8 text-sm sm:grid-cols-3">
+          <FooterColumn label={FOOTER.timeLabel}>
+            <LocalTime />
+          </FooterColumn>
+          <FooterColumn label={FOOTER.socialLabel}>
+            <SocialLinks links={SOCIALS} />
+          </FooterColumn>
+          <FooterColumn label={copyright}>
+            <a href="#" className="group inline-flex items-center gap-1 text-neutral-600 transition-colors hover:text-neutral-950">
+              {FOOTER.backToTop}
+              <span className="transition-transform duration-300 group-hover:-translate-y-0.5">{"\u2191"}</span>
+            </a>
+          </FooterColumn>
+        </Reveal>
       </div>
+      <Watermark text={FOOTER.watermark} />
     </section>
   );
 }

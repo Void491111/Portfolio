@@ -1,0 +1,16 @@
+﻿export const FOOTER = {
+  label: "Contact",
+  subheading: "Open to junior frontend roles. Email is the fastest way to reach me.",
+  copyLabel: "Copy",
+  copiedLabel: "Copied",
+  copyResetMs: 1800,
+  labelSwap: { duration: 0.2 },
+  timeLabel: "Local time",
+  city: "Batam, ID",
+  timeZone: "Asia/Jakarta",
+  zoneName: "WIB",
+  clockIntervalMs: 30000,
+  socialLabel: "Elsewhere",
+  backToTop: "Back to top",
+  watermark: "alif hidayat",
+};

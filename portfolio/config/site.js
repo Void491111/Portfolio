@@ -1,4 +1,4 @@
-export const SITE = {
+﻿export const SITE = {
   name: "Alif Hidayat",
   title: "Alif Hidayat — Frontend Developer",
   description: "Frontend developer from Batam building web and mobile apps.",
@@ -13,25 +13,25 @@ export const NAV_LINKS = [
 
 export const HERO = {
   status: "Open to work",
-  prefix: "I design & build",
-  glitchWord: "interfaces",
-  suffix: "that feel effortless.",
+  prefix: "Hi, I'm Alif.",
+  glitchWord: "frontend",
+  suffix: "developer from Batam.",
   description:
-    "Frontend developer from Batam. I turn ideas into web and mobile apps with clean code and careful design.",
+    "Fresh informatics graduate building web apps with Next.js and designing interfaces in Figma.",
   primaryCta: { label: "See projects", href: "#projects" },
   secondaryCta: { label: "Get in touch", href: "#contact" },
 };
 
 export const INTRO = {
   label: "About",
-  text: "I'm Alif, an informatics graduate from Politeknik Negeri Batam. I build web apps with Next.js, design interfaces in Figma, and have shipped Flutter apps for real production floors. I care about the small details users never notice, because everything just works.",
+  text: "I'm Alif, from Politeknik Negeri Batam. My main work is web apps, with some mobile in Flutter from my time at PT Satnusa Persada, and UI design in Figma. Right now I'm looking for a team where I can keep learning and ship real products.",
   terminal: [
     { type: "cmd", text: "whoami" },
     { type: "out", text: "alif hidayat · frontend developer" },
     { type: "cmd", text: "cat stack.txt" },
     { type: "out", text: "next.js  react  tailwind  flutter  figma" },
     { type: "cmd", text: "ls ~/projects" },
-    { type: "out", text: "mooiste-pos  satnusa-hmi  ternak-klip" },
+    { type: "out", text: "mooiste-pos  robot-control  hmi-redesign  mooiste-cafe" },
     { type: "cmd", text: "echo $STATUS" },
     { type: "out", text: "open to work ✦" },
   ],
@@ -50,3 +50,5 @@ export const SOCIALS = [
   { label: "LinkedIn", href: "https://linkedin.com/in/username" },
   { label: "Instagram", href: "https://instagram.com/username" },
 ];
+
+

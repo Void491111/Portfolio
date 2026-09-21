@@ -16,12 +16,18 @@ function scrambleText(text, progress, chars) {
     .join("");
 }
 
-export function useGlitch(text, config) {
+export function useGlitch(text, config, isEnabled) {
   const [display, setDisplay] = useState(text);
   const [isActive, setIsActive] = useState(false);
 
   useEffect(
     function scheduleGlitch() {
+      if (!isEnabled) {
+        setDisplay(text);
+        setIsActive(false);
+        return;
+      }
+
       let loopTimer;
       let frameTimer;
 
@@ -54,7 +60,7 @@ export function useGlitch(text, config) {
         clearTimeout(frameTimer);
       };
     },
-    [text, config]
+    [text, config, isEnabled]
   );
 
   return { display, isActive };

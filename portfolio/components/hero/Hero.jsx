@@ -1,5 +1,6 @@
-import DotBackground from "./DotBackground";
+﻿import DotBackground from "./DotBackground";
 import GlitchText from "./GlitchText";
+import StatusBadge from "./StatusBadge";
 import Reveal from "@/components/ui/Reveal";
 import { HERO } from "@/config/site";
 
@@ -9,14 +10,11 @@ export default function Hero() {
       <DotBackground />
       <div className="relative mx-auto w-full max-w-5xl">
         <Reveal>
-          <span className="inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-white/80 px-3 py-1 text-xs text-neutral-600 backdrop-blur">
-            <span className="size-1.5 animate-pulse rounded-full bg-neutral-950" />
-            {HERO.status}
-          </span>
+          <StatusBadge label={HERO.status} />
         </Reveal>
 
         <Reveal delay={0.1}>
-          <h1 className="mt-6 text-5xl font-semibold leading-[1.05] tracking-tight sm:text-7xl lg:text-8xl">
+          <h1 className="mt-6 text-4xl font-semibold leading-[1.1] tracking-tight sm:text-6xl lg:text-7xl">
             <span className="block text-neutral-400">{HERO.prefix}</span>
             <span className="block"><GlitchText text={HERO.glitchWord} /></span>
             <span className="block">{HERO.suffix}</span>
@@ -39,3 +37,4 @@ export default function Hero() {
     </section>
   );
 }
+

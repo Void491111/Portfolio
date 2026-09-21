@@ -19,10 +19,17 @@ export const DOT_GRID = {
   baseAlpha: 0.12,
   influence: 130,
   ease: 0.15,
+  settle: 0.5,
   color: "0, 0, 0",
 };
 
 export const SCROLL_TEXT = {
   dimOpacity: 0.15,
   offset: ["start 0.85", "end 0.45"],
+};
+export const HEARTBEAT = {
+  beat: { scale: [1, 1.4, 1, 1.25, 1] },
+  beatTransition: { duration: 1.2, times: [0, 0.12, 0.24, 0.36, 0.6], repeat: Infinity, ease: "easeInOut" },
+  ring: { scale: [1, 1, 2.8], opacity: [0, 0.4, 0] },
+  ringTransition: { duration: 1.2, times: [0, 0.12, 0.8], repeat: Infinity, ease: "easeOut" },
 };
