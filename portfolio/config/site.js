@@ -13,11 +13,11 @@ export const NAV_LINKS = [
 
 export const HERO = {
   status: "Open to work",
-  prefix: "Hi, I'm Alif.",
-  glitchWord: "frontend",
-  suffix: "developer from Batam.",
+  prefix: "I build web and mobile apps for",
+  glitchWord: "real operations",
+  suffix: "cafes, factory floors, counters.",
   description:
-    "Fresh informatics graduate building web apps with Next.js and designing interfaces in Figma.",
+    "Fresh informatics graduate from Batam. So far I have built a point-of-sale for a cafe and a control app for a production machine.",
   primaryCta: { label: "See projects", href: "#projects" },
   secondaryCta: { label: "Get in touch", href: "#contact" },
 };
@@ -50,6 +50,7 @@ export const SOCIALS = [
   { label: "LinkedIn", href: "https://www.linkedin.com/in/alif-hidayat-salim-109457274" },
   { label: "Instagram", href: "https://www.instagram.com/alifsalim_049" },
 ];
+
 
 
 

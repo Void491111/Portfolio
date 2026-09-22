@@ -57,3 +57,19 @@ html {
 @theme {
   --color-canvas: #f7f7f6;
 }
+
+.highlight {
+  display: inline-block;
+  background: #0a0a0a;
+  color: #ffffff;
+  padding: 0 0.28em 0.06em;
+  border-radius: 0.12em;
+}
+
+.glitch[data-tone="invert"][data-active="true"]::before {
+  color: #737373;
+}
+
+.glitch[data-tone="invert"][data-active="true"]::after {
+  color: #d4d4d4;
+}

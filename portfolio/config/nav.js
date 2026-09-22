@@ -1,4 +1,4 @@
-﻿export const NAV_BRAND = { mark: "AH", label: "Alif Hidayat" };
+﻿export const NAV_BRAND = { mark: "A", label: "Alif Hidayat" };
 
 export const NAV_LINKS = [
   { id: "about", label: "About", href: "/#about" },
