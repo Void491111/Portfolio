@@ -10,7 +10,7 @@ export default function ScrollRevealText({ text, className = "" }) {
   const words = text.split(" ");
 
   return (
-    <p ref={containerRef} className={`flex flex-wrap ${className}`}>
+    <p ref={containerRef} className={className}>
       {words.map(function renderWord(word, index) {
         const start = index / words.length;
         const end = start + 1 / words.length;
