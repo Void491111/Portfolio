@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { getProjectBySlug, getProjectSlugs } from "@/lib/projects";
 import { SITE } from "@/config/site";
 import ProjectHeader from "@/components/project-detail/ProjectHeader";
+import ProjectHighlights from "@/components/project-detail/ProjectHighlights";
 import ProjectSections from "@/components/project-detail/ProjectSections";
 import ProjectGallery from "@/components/project-detail/ProjectGallery";
 
@@ -27,6 +28,7 @@ export default async function ProjectPage({ params }) {
     <main className="px-4 pb-24 pt-28 sm:px-8">
       <article className="mx-auto max-w-4xl">
         <ProjectHeader project={project} />
+        <ProjectHighlights items={project.highlights} />
         <ProjectSections sections={project.sections} />
         <ProjectGallery images={project.gallery} />
       </article>
