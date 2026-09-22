@@ -22,3 +22,18 @@ export const NAV_TOGGLE = {
   collapseLabel: "Close menu",
 };
 
+
+export const NAV_DRAG = {
+  storageKey: "nav-anchor",
+  defaultAnchor: "top-center",
+  longPressMs: 280,
+  elastic: 0.15,
+  anchors: {
+    "top-left": "items-start justify-start",
+    "top-center": "items-start justify-center",
+    "top-right": "items-start justify-end",
+    "bottom-left": "items-end justify-start",
+    "bottom-center": "items-end justify-center",
+    "bottom-right": "items-end justify-end",
+  },
+};
