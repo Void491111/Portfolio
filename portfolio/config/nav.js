@@ -25,7 +25,7 @@ export const NAV_TOGGLE = {
 
 export const NAV_DRAG = {
   storageKey: "nav-anchor",
-  defaultAnchor: "top-center",
+  defaultAnchor: "bottom-center",
   longPressMs: 280,
   elastic: 0.15,
   anchors: {
@@ -37,3 +37,4 @@ export const NAV_DRAG = {
     "bottom-right": "items-end justify-end",
   },
 };
+
