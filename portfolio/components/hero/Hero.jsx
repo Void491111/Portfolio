@@ -6,7 +6,7 @@ import { HERO } from "@/config/site";
 
 export default function Hero() {
   return (
-    <section className="relative flex min-h-[86svh] items-center overflow-hidden px-4 sm:min-h-svh sm:px-8">
+    <section className="relative flex min-h-[78svh] items-center overflow-hidden px-4 sm:px-8 lg:min-h-svh">
       <DotBackground />
       <div className="relative mx-auto w-full max-w-5xl">
         <Reveal>
@@ -15,7 +15,7 @@ export default function Hero() {
 
         <Reveal delay={0.1}>
           <h1 className="mt-5 text-4xl font-semibold sm:mt-6 leading-[1.15] tracking-tight sm:text-6xl lg:text-7xl">
-            <span className="block text-neutral-400">{HERO.prefix}</span>
+            <span className="sheen block text-neutral-400">{HERO.prefix}</span>
             <span className="mt-1 block">
               <span className="highlight">
                 <GlitchText text={HERO.glitchWord} tone="invert" />
@@ -42,3 +42,5 @@ export default function Hero() {
     </section>
   );
 }
+
+
