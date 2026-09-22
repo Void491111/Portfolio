@@ -34,6 +34,8 @@ export default function Navbar() {
   return (
     <div ref={containerRef} className={`pointer-events-none fixed inset-0 z-50 flex p-4 ${NAV_DRAG.anchors[anchor]}`}>
       <motion.nav
+        layout
+        layoutDependency={isOpen}
         drag
         dragListener={false}
         dragControls={drag.controls}
@@ -48,10 +50,11 @@ export default function Navbar() {
         onClickCapture={drag.handleClickCapture}
         animate={{ opacity: isHidden ? 0 : 1, scale: drag.isDragging ? 1.04 : 1 }}
         transition={NAV_MOTION.spring}
-        className="pointer-events-auto flex h-fit items-center gap-1 rounded-full border border-neutral-200 bg-white/75 p-1.5 shadow-[0_4px_24px_rgba(0,0,0,0.06)] backdrop-blur-md"
+        className="glass pointer-events-auto flex h-fit items-center gap-1 rounded-full p-1.5"
         style={{ cursor: drag.isDragging ? "grabbing" : "auto" }}
       >
-        <button
+        <motion.button
+          layout="position"
           type="button"
           onClick={handleToggle}
           onDoubleClick={resetAnchor}
@@ -61,16 +64,16 @@ export default function Navbar() {
           className="flex size-9 shrink-0 select-none items-center justify-center rounded-full bg-neutral-950 font-mono text-xs font-medium text-white transition-transform duration-300 active:scale-95"
         >
           {NAV_BRAND.mark}
-        </button>
-        <AnimatePresence initial={false}>
+        </motion.button>
+        <AnimatePresence initial={false} mode="popLayout">
           {isOpen && (
             <motion.div
               key="nav-body"
-              initial={{ opacity: 0, width: 0 }}
-              animate={{ opacity: 1, width: "auto" }}
-              exit={{ opacity: 0, width: 0 }}
+              initial={{ opacity: 0, scale: 0.85 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.85 }}
               transition={NAV_MOTION.spring}
-              className="flex items-center gap-1 overflow-hidden"
+              className="flex items-center gap-1"
             >
               <NavLinks links={NAV_LINKS} activeId={activeId} />
               <Link

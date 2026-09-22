@@ -1,10 +1,10 @@
-import Reveal from "@/components/ui/Reveal";
+﻿import Reveal from "@/components/ui/Reveal";
 import ProjectImage from "./ProjectImage";
 
 export default function ProjectGallery({ images = [] }) {
   if (!images.length) return null;
   return (
-    <section className="mt-20">
+    <section className="mt-14 sm:mt-20">
       <Reveal>
         <h2 className="text-2xl font-semibold tracking-tight">Gallery</h2>
       </Reveal>

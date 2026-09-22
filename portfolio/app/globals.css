@@ -73,3 +73,32 @@ html {
 .glitch[data-tone="invert"][data-active="true"]::after {
   color: #d4d4d4;
 }
+
+.glass {
+  background: linear-gradient(140deg, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.42));
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.09),
+    0 0 0 1px rgba(0, 0, 0, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.04);
+}
+
+.panel-dark {
+  background: #0a0a0a;
+  color: #fafafa;
+}
+
+.panel-dark .text-neutral-600 { color: #a3a3a3; }
+.panel-dark .text-neutral-500 { color: #8f8f8f; }
+.panel-dark .text-neutral-400 { color: #6f6f6f; }
+.panel-dark .border-neutral-200 { border-color: rgba(255, 255, 255, 0.14); }
+.panel-dark .border-neutral-300 { border-color: rgba(255, 255, 255, 0.22); }
+.panel-dark .decoration-neutral-300 { text-decoration-color: rgba(255, 255, 255, 0.28); }
+.panel-dark .from-neutral-200 { --tw-gradient-from: #262626; }
+.panel-dark .bg-white { background-color: rgba(255, 255, 255, 0.06); }
+.panel-dark .hover\:text-neutral-950:hover { color: #ffffff; }
+.panel-dark .hover\:decoration-neutral-950:hover { text-decoration-color: #ffffff; }
+.panel-dark .hover\:border-neutral-950:hover { border-color: rgba(255, 255, 255, 0.5); }

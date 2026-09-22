@@ -1,9 +1,9 @@
-import Reveal from "@/components/ui/Reveal";
+﻿import Reveal from "@/components/ui/Reveal";
 import ProjectImage from "./ProjectImage";
 
 export default function ProjectSections({ sections = [] }) {
   return (
-    <div className="mt-16 space-y-20">
+    <div className="mt-12 space-y-14 sm:mt-16 sm:space-y-20">
       {sections.map(function renderSection(section) {
         return (
           <Reveal key={section.heading} as="section">

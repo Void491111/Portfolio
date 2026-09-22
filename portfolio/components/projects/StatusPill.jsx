@@ -1,7 +1,9 @@
-const PILL_CLASS =
-  "rounded-full border border-neutral-200/70 bg-white/60 px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider text-neutral-500 backdrop-blur-md";
+import { STATUS_TONES, STATUS_DEFAULT_TONE } from "@/config/status";
+
+const BASE_CLASS = "rounded-full border px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider backdrop-blur-md";
 
 export default function StatusPill({ label }) {
   if (!label) return null;
-  return <span className={PILL_CLASS}>{label}</span>;
+  const tone = STATUS_TONES[label] ?? STATUS_DEFAULT_TONE;
+  return <span className={`${BASE_CLASS} ${tone}`}>{label}</span>;
 }
