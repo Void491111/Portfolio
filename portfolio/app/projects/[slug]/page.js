@@ -25,7 +25,7 @@ export default async function ProjectPage({ params }) {
   if (!project) notFound();
 
   return (
-    <main className="px-4 pb-24 pt-28 sm:px-8">
+    <main className="px-4 pb-20 pt-24 sm:px-8 sm:pb-24 sm:pt-28">
       <article className="mx-auto max-w-4xl">
         <ProjectHeader project={project} />
         <ProjectHighlights items={project.highlights} />
