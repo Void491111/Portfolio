@@ -11,7 +11,7 @@
   links: [],
   sections: [
     {
-      heading: "Context",
+      heading: "What it drives",
       body: [
         "During my internship at PT Satnusa Persada I built the front-end of a mobile app for one of the smaller machines on the floor, a two-axis unit. An engineer had already built the backend, so my side was the interface and the calls against his API.",
       ],
@@ -31,7 +31,7 @@
       ],
     },
     {
-      heading: "Network check and notes",
+      heading: "Wrong Wi-Fi, no error",
       body: [
         "The app talks to the machine over the local network, so a phone on the wrong Wi-Fi simply fails to connect with no explanation. I added a check that compares the phone's network against the machine's and says so before the operator starts pressing buttons.",
         "The home screen also carries a small notes and todo list, plus a log of recent activity, so what happened on the machine stays next to the controls instead of in a separate notebook.",
@@ -40,3 +40,4 @@
   ],
   gallery: [],
 };
+

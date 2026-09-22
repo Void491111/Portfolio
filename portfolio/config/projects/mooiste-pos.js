@@ -11,73 +11,72 @@ export const MOOISTE_POS = {
   stack: ["Next.js", "TypeScript", "NestJS", "Prisma", "Supabase", "Tailwind CSS"],
   cover: IMG + "kasir-cart.webp",
   links: [],
+  highlights: [
+    "Covers a full shift: order, queue, stock, cash close",
+    "Two roles in one app, cashier and owner",
+    "Guests order from their own phone by table QR",
+  ],
   sections: [
     {
-      heading: "Overview",
+      heading: "Why rebuild it",
       body: [
-        "Mooiste started as my final-year project: a web ordering system for a cafe in Batam. This is the full remake. Same problem, rebuilt from scratch as a point-of-sale a cashier can run a whole shift on.",
-        "The original stopped at ordering. The remake covers the shift end to end: taking orders at the counter, routing drinks and food to the right station, tracking what is still in stock, counting the cash drawer at closing, and giving the owner numbers to read the next morning.",
-        "Two roles share one app. A cashier only sees what a shift needs. The owner gets menu management, reports and table QR codes on top of that.",
+        "Mooiste began as my final-year project, a web ordering system for a cafe in Batam. It stopped at ordering.",
+        "The remake covers the whole shift: orders at the counter, drinks and food routed to the right station, stock that moves as things sell, a cash count at closing, and numbers the owner reads the next morning. Two roles share one app. A cashier sees only what a shift needs, while the owner gets menu, reports and table QR codes on top.",
       ],
     },
     {
       heading: "Taking an order",
       body: [
-        "The menu is grouped into Coffee, Non Coffee, Food and Snack, with search on top for a cafe that keeps adding items. Each card shows how many are left, and the quantity stepper sits on the card itself so the cashier never leaves the grid mid-order.",
-        "The order panel keeps dine-in and takeaway apart, since they are billed and served differently. Tax is applied at 10%, and the order closes with either cash or QRIS.",
+        "Each menu card shows what is left and carries its own quantity stepper, so the cashier never leaves the grid mid-order. Dine-in and takeaway stay separate because they are billed and served differently. Tax is 10%, and the order closes with cash or QRIS.",
       ],
       image: { src: IMG + "kasir-cart.webp", caption: "Counter view with an open order" },
     },
     {
       heading: "Kitchen queue",
       body: [
-        "Every paid order lands in the queue as a card. Drinks are a checklist the barista ticks off one by one, and kitchen items are listed separately underneath so the two stations do not read each other's work.",
-        "A counter shows progress per order, so anyone walking past knows what is nearly done. Orders already handed over stay parked at the bottom for a few minutes with an undo, because the most common mistake is handing a drink to the wrong table.",
+        "Drinks are a checklist the barista ticks off. Kitchen items sit in their own list underneath, so neither station reads the other's work.",
+        "Handed-over orders park at the bottom for a few minutes with an undo. The most common mistake on a busy night is giving a drink to the wrong table.",
       ],
       image: { src: IMG + "antrian.webp", caption: "Queue with per-item checklist" },
     },
     {
-      heading: "Stock that reflects open orders",
+      heading: "Stock that knows about open orders",
       body: [
-        "Stock keeps three numbers apart: what is physically on hand, what is already committed to orders still in the queue, and what is actually available to sell. Without that split a cashier can sell the same last portion twice within a minute.",
-        "The owner edits the numbers inline after a delivery. A cashier cannot change stock, only mark an item sold out when the ingredients run out mid-shift. Sold-out items grey out in the counter grid instead of disappearing, so the cashier can tell a guest the item exists but is finished today.",
+        "Three numbers stay separate: on hand, committed to orders still in the queue, and actually available. Without that split, two cashiers can sell the same last portion within a minute.",
+        "The owner edits counts inline after a delivery. A cashier can only mark an item sold out. Sold-out items grey out in the grid instead of vanishing, so a guest gets told the item exists but is finished today.",
       ],
       image: { src: IMG + "stok-owner.webp", caption: "Stock, owner view with inline editing" },
     },
     {
       heading: "Closing the drawer",
       body: [
-        "At the end of a shift the cashier counts the physical cash and types the amount in. The app compares it against what cash orders alone should have produced, so QRIS payments do not distort the count.",
-        "The result is recorded with the difference, who closed it, and an optional note for things like change that was never picked up. Past closings stay in a history list, which is what makes a shortage traceable to a shift instead of a guess.",
+        "The cashier counts the drawer and types the amount. It is checked against cash orders only, so QRIS never distorts the count, and the difference is recorded with who closed it and an optional note. Thirty closings stay in history, which is what makes a shortage traceable to a shift.",
       ],
       image: { src: IMG + "tutup-kas-selesai.webp", caption: "Closed drawer with recorded difference" },
     },
     {
-      heading: "Owner dashboard",
+      heading: "What the owner sees",
       body: [
-        "Revenue, order count, average ticket and cancellations, over one, seven, thirty or ninety days. The daily revenue line makes slow weeks obvious at a glance.",
-        "The hourly distribution is the chart the owner actually uses: it shows which hours carry the day, which is what staffing decisions are made from.",
+        "Revenue, orders, average ticket and cancellations across 1, 7, 30 or 90 days. The hourly chart is the one that gets used: it shows which hours carry the day, and staffing follows from that.",
       ],
       image: { src: IMG + "dasbor.webp", caption: "Dashboard with daily revenue and hourly spread" },
     },
     {
       heading: "Reports",
-      body: [
-        "Any date range, a daily recap table, and a download for either the daily totals or the per-menu breakdown, so the numbers can be handed to whoever does the bookkeeping without giving them an account.",
-      ],
+      body: ["Any date range, a daily recap, and a download for daily totals or the per-menu breakdown."],
       image: { src: IMG + "laporan.webp", caption: "Report with custom date range" },
     },
     {
-      heading: "Menu management",
+      heading: "Menu",
       body: [
-        "The owner adds an item, sets its price and category, attaches a photo, and toggles whether it is on sale. The toggle is separate from stock on purpose: an item can be in stock but taken off the menu.",
+        "Price, category, photo, and an on-sale toggle kept separate from stock. An item can be in stock and still be off the menu.",
       ],
       image: { src: IMG + "menu.webp", caption: "Menu management" },
     },
     {
-      heading: "Table QR ordering",
+      heading: "Table QR",
       body: [
-        "Each table gets a printable QR code. A guest scans it, sees the menu on their own phone, and orders without waiting for someone to come over. The order arrives in the same queue as a counter order, so the kitchen has one place to look.",
+        "A printable code per table. A guest scans, orders from their phone, and it lands in the same queue as a counter order.",
       ],
       image: { src: IMG + "qr-meja.webp", caption: "Printable QR codes per table" },
     },
@@ -90,4 +89,3 @@ export const MOOISTE_POS = {
     { src: IMG + "tutup-kas-input.webp", caption: "Counting the drawer" },
   ],
 };
-
