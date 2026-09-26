@@ -8,7 +8,7 @@ export default function ProjectSections({ sections = [] }) {
         return (
           <Reveal key={section.heading} as="section">
             <h2 className="text-2xl font-semibold tracking-tight">{section.heading}</h2>
-            <div className="mt-4 space-y-4 leading-relaxed text-neutral-600">
+            <div className="mt-4 space-y-4 text-justify leading-relaxed text-neutral-600 hyphens-auto">
               {section.body.map(function renderParagraph(paragraph, index) {
                 return <p key={index}>{paragraph}</p>;
               })}
@@ -20,3 +20,4 @@ export default function ProjectSections({ sections = [] }) {
     </div>
   );
 }
+

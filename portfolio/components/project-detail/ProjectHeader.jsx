@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import Reveal from "@/components/ui/Reveal";
 import ProjectCover from "@/components/projects/ProjectCover";
 import ProjectMeta from "./ProjectMeta";
@@ -15,7 +15,7 @@ export default function ProjectHeader({ project }) {
         <h1 className="mt-6 text-4xl font-semibold tracking-tight sm:text-6xl">{project.title}</h1>
       </Reveal>
       <Reveal delay={0.1}>
-        <p className="mt-4 max-w-2xl text-lg text-neutral-600">{project.summary}</p>
+        <p className="mt-4 max-w-2xl text-justify text-lg text-neutral-600 hyphens-auto">{project.summary}</p>
       </Reveal>
       <Reveal delay={0.15}>
         <ProjectMeta project={project} />

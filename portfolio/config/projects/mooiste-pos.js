@@ -1,4 +1,4 @@
-﻿const IMG = "/projects/shift/";
+﻿const IMG = "/projects/mooiste/";
 
 export const MOOISTE_POS = {
   slug: "mooiste-pos",
@@ -89,3 +89,4 @@ export const MOOISTE_POS = {
     { src: IMG + "tutup-kas-input.webp", caption: "Counting the drawer" },
   ],
 };
+
