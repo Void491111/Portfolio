@@ -9,6 +9,11 @@ export function useLongPressDrag() {
   const draggedRef = useRef(false);
   const [isDragging, setIsDragging] = useState(false);
 
+  function canDrag() {
+    if (typeof window === "undefined") return false;
+    return window.matchMedia(NAV_DRAG.dragFrom).matches;
+  }
+
   function clearTimer() {
     if (!timerRef.current) return;
     clearTimeout(timerRef.current);
@@ -16,6 +21,7 @@ export function useLongPressDrag() {
   }
 
   function handlePointerDown(event) {
+    if (!canDrag()) return;
     const nativeEvent = event.nativeEvent;
     clearTimer();
     timerRef.current = setTimeout(function beginDrag() {

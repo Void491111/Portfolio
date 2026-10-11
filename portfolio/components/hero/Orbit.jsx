@@ -5,7 +5,7 @@ import { ORBIT } from "@/config/orbit";
 
 export default function Orbit() {
   return (
-    <div className="relative mx-auto aspect-square w-full max-w-[300px] sm:max-w-[400px]">
+    <div className="relative mx-auto aspect-square w-full max-w-[320px] sm:max-w-[400px]">
       <div className="absolute inset-0">
         {ORBIT.rings.map(function renderRing(ring) {
           return <OrbitRing key={ring.id} ring={ring} />;
@@ -17,7 +17,7 @@ export default function Orbit() {
             width={ORBIT.avatar.size}
             height={ORBIT.avatar.size}
             priority
-            className="size-24 rounded-full border border-neutral-200 object-cover shadow-[0_8px_30px_rgba(0,0,0,0.12)] sm:size-32"
+            className="size-20 rounded-full border border-neutral-200 object-cover shadow-[0_8px_30px_rgba(0,0,0,0.12)] sm:size-32"
           />
         </div>
       </div>

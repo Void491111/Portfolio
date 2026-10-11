@@ -177,3 +177,15 @@ html {
 @theme {
   --color-gold: #b1873b;
 }
+.orbit-ring { --orbit-r: var(--orbit-r-sm); }
+
+@media (min-width: 640px) {
+  .orbit-ring { --orbit-r: var(--orbit-r-lg); }
+}
+
+.orbit-circle {
+  width: calc(var(--orbit-r) * 2);
+  height: calc(var(--orbit-r) * 2);
+}
+
+.orbit-arm { transform: rotate(var(--orbit-a)) translateY(calc(var(--orbit-r) * -1)) rotate(calc(var(--orbit-a) * -1)); }

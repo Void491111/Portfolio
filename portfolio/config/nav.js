@@ -28,15 +28,17 @@ export const NAV_DRAG = {
   storageKey: "nav-anchor",
   defaultAnchor: "bottom-center",
   longPressMs: 280,
+  dragFrom: "(min-width: 1024px)",
   elastic: 0.15,
   anchors: {
-    "top-left": "items-start justify-start",
-    "top-center": "items-start justify-center",
-    "top-right": "items-start justify-end",
-    "bottom-left": "items-end justify-start",
-    "bottom-center": "items-end justify-center",
-    "bottom-right": "items-end justify-end",
+    "top-left": "lg:items-start lg:justify-start",
+    "top-center": "lg:items-start lg:justify-center",
+    "top-right": "lg:items-start lg:justify-end",
+    "bottom-left": "lg:items-end lg:justify-start",
+    "bottom-center": "lg:items-end lg:justify-center",
+    "bottom-right": "lg:items-end lg:justify-end",
   },
 };
+
 
 

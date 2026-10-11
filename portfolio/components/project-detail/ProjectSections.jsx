@@ -1,5 +1,6 @@
 ﻿import Reveal from "@/components/ui/Reveal";
 import ProjectImage from "./ProjectImage";
+import SectionBody from "./SectionBody";
 
 export default function ProjectSections({ sections = [] }) {
   return (
@@ -8,11 +9,7 @@ export default function ProjectSections({ sections = [] }) {
         return (
           <Reveal key={section.heading} as="section">
             <h2 className="text-2xl font-semibold tracking-tight">{section.heading}</h2>
-            <div className="mt-4 space-y-4 text-justify leading-relaxed text-neutral-600 hyphens-auto">
-              {section.body.map(function renderParagraph(paragraph, index) {
-                return <p key={index}>{paragraph}</p>;
-              })}
-            </div>
+            <SectionBody paragraphs={section.body} />
             {section.image && <ProjectImage image={section.image} className="mt-8" />}
           </Reveal>
         );
@@ -20,4 +17,3 @@ export default function ProjectSections({ sections = [] }) {
     </div>
   );
 }
-

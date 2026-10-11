@@ -16,7 +16,7 @@ export default function NavItem({ link, index, isActive, isHovered, onHover }) {
       <Link
         href={link.href}
         onMouseEnter={handleEnter}
-        className={`relative z-10 flex items-center gap-1.5 rounded-full px-3.5 py-2 text-sm transition-colors ${tone}`}
+        className={"relative z-10 flex items-center gap-1.5 rounded-full px-2.5 py-2 text-[13px] transition-colors sm:px-3.5 sm:text-sm " + tone}
       >
         <span className="hidden font-mono text-[10px] text-neutral-400 sm:inline">{formatIndex(index)}</span>
         {link.label}

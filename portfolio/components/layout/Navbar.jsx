@@ -84,7 +84,7 @@ export default function Navbar() {
               <NavLinks links={NAV_LINKS} activeId={activeId} />
               <Link
                 href={NAV_CTA.href}
-                className="group ml-1 inline-flex shrink-0 items-center gap-1.5 rounded-full bg-neutral-950 px-4 py-2 text-sm text-white transition-colors hover:bg-neutral-800"
+                className="group ml-1 inline-flex shrink-0 items-center gap-1.5 rounded-full bg-neutral-950 px-3 py-2 text-[13px] text-white transition-colors hover:bg-neutral-800 sm:px-4 sm:text-sm"
               >
                 {NAV_CTA.label}
                 <span className="transition-transform duration-300 group-hover:translate-x-0.5">{"\u2192"}</span>
