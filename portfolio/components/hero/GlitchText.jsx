@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import { useRef } from "react";
 import { useInView } from "motion/react";
 import { useGlitch } from "@/hooks/useGlitch";
@@ -11,7 +11,10 @@ export default function GlitchText({ text, tone = "default" }) {
 
   return (
     <span ref={ref} className="glitch" data-text={text} data-tone={tone} data-active={isActive} aria-label={text}>
-      <span aria-hidden>{display}</span>
+      <span className="invisible">{text}</span>
+      <span className="glitch-live" aria-hidden>
+        {display}
+      </span>
     </span>
   );
 }

@@ -189,3 +189,11 @@ html {
 }
 
 .orbit-arm { transform: rotate(var(--orbit-a)) translateY(calc(var(--orbit-r) * -1)) rotate(calc(var(--orbit-a) * -1)); }
+.glitch-live {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.highlight { overflow: hidden; }

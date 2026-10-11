@@ -7,9 +7,11 @@ import { useScrollHide } from "@/hooks/useScrollHide";
 import { useActiveSection } from "@/hooks/useActiveSection";
 import { useStoredAnchor } from "@/hooks/useStoredAnchor";
 import { useLongPressDrag } from "@/hooks/useLongPressDrag";
+import { useOverDark } from "@/hooks/useOverDark";
 import { pickAnchor } from "@/lib/anchor";
 import { NAV_BRAND, NAV_CTA, NAV_LINKS, NAV_SECTION_IDS, NAV_MOTION, NAV_TOGGLE, NAV_DRAG } from "@/config/nav";
-import { useOverDark } from "@/hooks/useOverDark";
+
+const SHELL = "pointer-events-none fixed inset-0 z-50 flex p-4 ";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(true);
@@ -18,10 +20,9 @@ export default function Navbar() {
   const { anchor, saveAnchor, resetAnchor } = useStoredAnchor();
   const drag = useLongPressDrag();
   const containerRef = useRef(null);
-  const isHidden = NAV_MOTION.hideOnScroll && isOpen && isScrolledAway;
-
   const navRef = useRef(null);
   const isOverDark = useOverDark(navRef, ".panel-dark");
+  const isHidden = NAV_MOTION.hideOnScroll && isOpen && isScrolledAway;
 
   function handleToggle() {
     setIsOpen(function toggleOpen(previous) {
@@ -36,8 +37,10 @@ export default function Navbar() {
   }
 
   return (
-    <div ref={containerRef} className={`pointer-events-none fixed inset-0 z-50 flex p-4 ${NAV_DRAG.anchors[anchor]}`}>
+    <div ref={containerRef} className={SHELL + NAV_DRAG.base + " " + NAV_DRAG.anchors[anchor]}>
       <motion.nav
+        ref={navRef}
+        data-over-dark={isOverDark}
         layout
         layoutDependency={isOpen}
         drag
@@ -56,8 +59,6 @@ export default function Navbar() {
         transition={NAV_MOTION.spring}
         className="glass pointer-events-auto flex h-fit items-center gap-1 rounded-full p-1.5"
         style={{ cursor: drag.isDragging ? "grabbing" : "auto" }}
-        ref={navRef}
-        data-over-dark={isOverDark}
       >
         <motion.button
           layout="position"
