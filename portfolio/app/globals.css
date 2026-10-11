@@ -158,3 +158,22 @@ html {
   background-color: #ffffff;
   color: #0a0a0a;
 }
+
+@keyframes orbit-spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes orbit-spin-reverse {
+  to { transform: rotate(-360deg); }
+}
+
+.orbit-cw { animation: orbit-spin var(--orbit-duration) linear infinite; }
+.orbit-ccw { animation: orbit-spin-reverse var(--orbit-duration) linear infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .orbit-cw,
+  .orbit-ccw { animation: none; }
+}
+@theme {
+  --color-gold: #b1873b;
+}

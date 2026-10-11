@@ -2,10 +2,11 @@
 
 export const NAV_LINKS = [
   { id: "about", label: "About", href: "/#about" },
+  { id: "timeline", label: "Timeline", href: "/#timeline" },
   { id: "projects", label: "Projects", href: "/#projects" },
 ];
 
-export const NAV_SECTION_IDS = ["about", "projects"];
+export const NAV_SECTION_IDS = ["about", "timeline", "projects"];
 
 export const NAV_CTA = { label: "Contact", href: "/#contact" };
 
@@ -37,4 +38,5 @@ export const NAV_DRAG = {
     "bottom-right": "items-end justify-end",
   },
 };
+
 
