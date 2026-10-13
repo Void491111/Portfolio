@@ -2,13 +2,16 @@
 import { AnimatePresence, motion } from "motion/react";
 import Toast from "@/components/ui/Toast";
 import { useCopy } from "@/hooks/useCopy";
+import { useChime } from "@/hooks/useChime";
 import { FOOTER } from "@/config/footer";
 import { TOAST } from "@/config/toast";
 
 export default function CopyEmail({ email }) {
   const { isCopied, copy } = useCopy(FOOTER.copyResetMs);
+  const playChime = useChime();
 
   function handleClick() {
+    playChime();
     copy(email);
   }
 
