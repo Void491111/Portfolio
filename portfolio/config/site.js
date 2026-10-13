@@ -2,7 +2,7 @@
   name: "Alif Hidayat",
   title: "Alif Hidayat — Frontend Developer",
   description: "Frontend developer from Batam building web and mobile apps.",
-  email: "voidw87@gmail.com",
+  email: "voidwalker1290@gmail.com",
 };
 
 export const NAV_LINKS = [
@@ -17,14 +17,14 @@ export const HERO = {
   glitchWord: "real operations",
   suffix: "cafes, factory floors, counters.",
   description:
-    "Fresh informatics graduate from Batam. So far I have built a point-of-sale for a cafe and a control app for a production machine.",
+    "Fresh informatics grad from Batam. So far I've built a point-of-sale for a cafe and a control app for a factory machine.",
   primaryCta: { label: "See projects", href: "#projects" },
   secondaryCta: { label: "Get in touch", href: "#contact" },
 };
 
 export const INTRO = {
   label: "About",
-  text: "I'm Alif, from Politeknik Negeri Batam. Mostly web apps, plus some Flutter work on a factory floor and UI design in Figma. I'm looking for a team where I can keep learning and ship real products.",
+  text: "I'm Alif, from Politeknik Negeri Batam. Mostly web apps, plus some Flutter work on a factory floor and UI design in Figma. I'm after a team where I can keep learning and ship things people actually use.",
   terminal: [
     { type: "cmd", text: "whoami" },
     { type: "out", text: "alif hidayat · frontend developer" },
@@ -50,6 +50,7 @@ export const SOCIALS = [
   { label: "LinkedIn", href: "https://www.linkedin.com/in/alif-hidayat-salim-109457274" },
   { label: "Instagram", href: "https://www.instagram.com/alifsalim_049" },
 ];
+
 
 
 

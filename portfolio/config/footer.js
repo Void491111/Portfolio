@@ -1,6 +1,6 @@
 ﻿export const FOOTER = {
   label: "Contact",
-  subheading: "Open to junior frontend roles. Email is the fastest way to reach me.",
+  subheading: "Open to junior frontend roles. Email's the fastest way to reach me.",
   copyLabel: "Copy",
   copiedLabel: "Copied",
   copyResetMs: 1800,
@@ -14,3 +14,4 @@
   backToTop: "Back to top",
   watermark: "alif hidayat",
 };
+

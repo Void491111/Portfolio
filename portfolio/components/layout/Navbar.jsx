@@ -1,99 +1,39 @@
 ﻿"use client";
 import Link from "next/link";
-import { useRef, useState } from "react";
-import { AnimatePresence, motion } from "motion/react";
 import NavLinks from "./NavLinks";
-import { useScrollHide } from "@/hooks/useScrollHide";
 import { useActiveSection } from "@/hooks/useActiveSection";
-import { useStoredAnchor } from "@/hooks/useStoredAnchor";
-import { useLongPressDrag } from "@/hooks/useLongPressDrag";
 import { useOverDark } from "@/hooks/useOverDark";
-import { pickAnchor } from "@/lib/anchor";
-import { NAV_BRAND, NAV_CTA, NAV_LINKS, NAV_SECTION_IDS, NAV_MOTION, NAV_TOGGLE, NAV_DRAG } from "@/config/nav";
+import { NAV_BRAND, NAV_CTA, NAV_LINKS, NAV_SECTION_IDS, NAV_MOTION, NAV_DARK } from "@/config/nav";
 
-const SHELL = "pointer-events-none fixed inset-0 z-50 flex p-4 ";
+const SHELL =
+  "pointer-events-none fixed inset-x-0 bottom-0 z-50 flex justify-center px-3 pb-[calc(env(safe-area-inset-bottom)+12px)]";
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(true);
-  const isScrolledAway = useScrollHide(NAV_MOTION.hideAfter);
   const activeId = useActiveSection(NAV_SECTION_IDS, NAV_MOTION.activeRootMargin);
-  const { anchor, saveAnchor, resetAnchor } = useStoredAnchor();
-  const drag = useLongPressDrag();
-  const containerRef = useRef(null);
-  const navRef = useRef(null);
-  const isOverDark = useOverDark(navRef, ".panel-dark");
-  const isHidden = NAV_MOTION.hideOnScroll && isOpen && isScrolledAway;
-
-  function handleToggle() {
-    setIsOpen(function toggleOpen(previous) {
-      return !previous;
-    });
-  }
-
-  function handleDragEnd(event, info) {
-    const viewport = { width: window.innerWidth, height: window.innerHeight };
-    saveAnchor(pickAnchor(info.point, viewport));
-    drag.handleDragEnd();
-  }
+  const isOverDark = useOverDark(NAV_DARK.selector, NAV_DARK.rootMargin);
 
   return (
-    <div ref={containerRef} className={SHELL + NAV_DRAG.base + " " + NAV_DRAG.anchors[anchor]}>
-      <motion.nav
-        ref={navRef}
+    <div className={SHELL}>
+      <nav
         data-over-dark={isOverDark}
-        layout
-        layoutDependency={isOpen}
-        drag
-        dragListener={false}
-        dragControls={drag.controls}
-        dragMomentum={false}
-        dragSnapToOrigin
-        dragConstraints={containerRef}
-        dragElastic={NAV_DRAG.elastic}
-        onDragEnd={handleDragEnd}
-        onPointerDown={drag.handlePointerDown}
-        onPointerUp={drag.handlePointerUp}
-        onPointerCancel={drag.handlePointerUp}
-        onClickCapture={drag.handleClickCapture}
-        animate={{ opacity: isHidden ? 0 : 1, scale: drag.isDragging ? 1.04 : 1 }}
-        transition={NAV_MOTION.spring}
-        className="glass pointer-events-auto flex h-fit items-center gap-1 rounded-full p-1.5"
-        style={{ cursor: drag.isDragging ? "grabbing" : "auto" }}
+        className="glass pointer-events-auto flex max-w-full items-center gap-0.5 rounded-full p-1.5 sm:gap-1"
       >
-        <motion.button
-          layout="position"
-          type="button"
-          onClick={handleToggle}
-          onDoubleClick={resetAnchor}
-          aria-expanded={isOpen}
-          aria-label={isOpen ? NAV_TOGGLE.collapseLabel : NAV_TOGGLE.expandLabel}
-          title={NAV_BRAND.label}
-          className="flex size-9 shrink-0 select-none items-center justify-center rounded-full bg-neutral-950 font-mono text-xs font-medium text-white transition-transform duration-300 active:scale-95"
+        <Link
+          href="/"
+          aria-label={NAV_BRAND.label}
+          className="flex size-8 shrink-0 select-none items-center justify-center rounded-full bg-neutral-950 font-mono text-[11px] font-medium text-white sm:size-9 sm:text-xs"
         >
           {NAV_BRAND.mark}
-        </motion.button>
-        <AnimatePresence initial={false} mode="popLayout">
-          {isOpen && (
-            <motion.div
-              key="nav-body"
-              initial={{ opacity: 0, scale: 0.85 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.85 }}
-              transition={NAV_MOTION.spring}
-              className="flex items-center gap-1"
-            >
-              <NavLinks links={NAV_LINKS} activeId={activeId} />
-              <Link
-                href={NAV_CTA.href}
-                className="group ml-1 inline-flex shrink-0 items-center gap-1.5 rounded-full bg-neutral-950 px-3 py-2 text-[13px] text-white transition-colors hover:bg-neutral-800 sm:px-4 sm:text-sm"
-              >
-                {NAV_CTA.label}
-                <span className="transition-transform duration-300 group-hover:translate-x-0.5">{"\u2192"}</span>
-              </Link>
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </motion.nav>
+        </Link>
+        <NavLinks links={NAV_LINKS} activeId={activeId} />
+        <Link
+          href={NAV_CTA.href}
+          className="group ml-0.5 inline-flex shrink-0 items-center gap-1.5 rounded-full bg-neutral-950 px-2.5 py-1.5 text-[12px] text-white transition-colors hover:bg-neutral-800 sm:ml-1 sm:px-4 sm:py-2 sm:text-sm"
+        >
+          {NAV_CTA.label}
+          <span className="hidden transition-transform duration-300 group-hover:translate-x-0.5 sm:inline">{"\u2192"}</span>
+        </Link>
+      </nav>
     </div>
   );
 }

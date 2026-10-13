@@ -20,37 +20,37 @@ export const MOOISTE_CAFE = {
     {
       heading: "The final-year version",
       body: [
-        "The first build was aimed at whoever runs the cafe rather than whoever stands at the till. It is an admin panel: revenue over the last thirty days, order count, average ticket, and voided orders, with the day's orders listed underneath.",
-        "Everything the cafe sells is managed from the same place, with categories, menu items and their prices, and user accounts split between admin and cashier.",
+        "The first build was aimed at whoever runs the cafe, not whoever stands at the till. It''s an admin panel: revenue over the last thirty days, order count, average ticket and voided orders, with the day''s orders listed underneath.",
+        "Everything the cafe sells is managed from one place, with categories, menu items and prices, and accounts split between admin and cashier.",
       ],
       image: { src: IMG + "dashboard.webp", caption: "Admin dashboard, first version" },
     },
     {
       heading: "Ordering by table QR",
       body: [
-        "Each table has a code and its own QR, generated in the app and downloadable as a printable card. A guest scans the code on their table and orders from their phone.",
+        "Every table has a code and its own QR, generated in the app and downloadable as a printable card. A guest scans the code on their table and orders from their phone.",
       ],
       image: { src: IMG + "tables-qr.webp", caption: "Table and QR management" },
     },
     {
       heading: "The second version",
       body: [
-        "The first build could take orders but was awkward to run a shift on, so the second version was written around the counter instead of the dashboard. The menu became a grid of cards with photos, prices and categories down the side, with the open order and its total sitting next to it.",
-        "Items that sell best are surfaced at the top of the grid instead of being hunted for, which matters most during a rush. A dark theme was added for the same reason a cashier screen usually gets one: it runs all day.",
+        "The first build could take orders but was awkward to run a shift on, so I wrote the second version around the counter instead of the dashboard. The menu became a grid of cards with photos and prices, categories down the side, and the open order with its total sitting next to it.",
+        "Items that sell best get surfaced at the top of the grid instead of being hunted for, which matters most during a rush. A dark theme went in for the same reason a cashier screen usually gets one: it runs all day.",
       ],
       image: { src: IMG + "pos.webp", caption: "Counter view, second version" },
     },
     {
       heading: "Stock and queue",
       body: [
-        "The second version also added a queue for paid orders and a simple availability list, so an item that runs out can be taken off the counter without editing the menu.",
+        "The second version also added a queue for paid orders and a simple availability list, so an item that runs out can come off the counter without editing the menu.",
       ],
       image: { src: IMG + "inventory.webp", caption: "Stock and menu availability" },
     },
     {
       heading: "Where it went next",
       body: [
-        "Both versions are what the current remake is built on. The remake keeps the ideas that worked, the table QR and the counter-first layout, and rebuilds the parts that did not hold up once a whole shift ran through them.",
+        "Both versions are what the current remake is built on. It keeps the ideas that worked, the table QR and the counter-first layout, and rebuilds the parts that didn''t hold up once a whole shift ran through them.",
       ],
     },
   ],

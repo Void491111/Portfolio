@@ -4,6 +4,9 @@ import { motion } from "motion/react";
 import { formatIndex } from "@/lib/format";
 import { NAV_MOTION } from "@/config/nav";
 
+const LINK_BASE =
+  "relative z-10 flex items-center gap-1.5 rounded-full px-2 py-1.5 text-[12px] transition-colors sm:px-3.5 sm:py-2 sm:text-sm ";
+
 export default function NavItem({ link, index, isActive, isHovered, onHover }) {
   function handleEnter() {
     onHover(link.id);
@@ -13,11 +16,7 @@ export default function NavItem({ link, index, isActive, isHovered, onHover }) {
 
   return (
     <li className="relative">
-      <Link
-        href={link.href}
-        onMouseEnter={handleEnter}
-        className={"relative z-10 flex items-center gap-1.5 rounded-full px-2.5 py-2 text-[13px] transition-colors sm:px-3.5 sm:text-sm " + tone}
-      >
+      <Link href={link.href} onMouseEnter={handleEnter} className={LINK_BASE + tone}>
         <span className="hidden font-mono text-[10px] text-neutral-400 sm:inline">{formatIndex(index)}</span>
         {link.label}
       </Link>
@@ -27,7 +26,7 @@ export default function NavItem({ link, index, isActive, isHovered, onHover }) {
       {isActive && (
         <motion.span
           layoutId="nav-active"
-          className="absolute bottom-1 left-1/2 size-1 -translate-x-1/2 rounded-full bg-neutral-950"
+          className="absolute bottom-0.5 left-1/2 size-1 -translate-x-1/2 rounded-full bg-neutral-950"
           transition={NAV_MOTION.spring}
         />
       )}

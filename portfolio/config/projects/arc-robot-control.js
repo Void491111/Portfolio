@@ -2,10 +2,10 @@
   slug: "arc-robot-control",
   title: "Arc Articulated Robot Control",
   year: "2025",
+  status: "In progress",
   role: "Mobile front-end intern",
   layout: "default",
-  summary:
-    "Flutter app for driving a small two-axis machine from a phone, built as a stripped-down version of the SCARA robot control app.",
+  summary: "A Flutter app for driving a small two-axis machine from a phone, built as a stripped-down version of the SCARA robot control app.",
   stack: ["Flutter", "Dart", "REST API"],
   cover: null,
   links: [],
@@ -19,25 +19,24 @@
     {
       heading: "Interface",
       body: [
-        "Operators there already knew the control app for the SCARA robot, so I kept my screens close to what they were used to rather than inventing a new visual language. That app runs on red and white accents, which happen to be the company's own colors, so the app sits in the same family as everything else on the floor.",
-        "What I built is a stripped-down version of that app: the controls a two-axis machine actually needs, and nothing carried over from a six-axis arm. The layout is mobile first, since the whole point was operating the machine from a phone instead of a fixed panel.",
+        "Operators there already knew the control app for the SCARA robot, so I kept my screens close to what they were used to instead of inventing a new visual language. That app runs on red and white accents, which happen to be the company''s own colors, so mine sits in the same family as everything else on the floor.",
+        "What I built is a stripped-down version of it: the controls a two-axis machine actually needs, and nothing carried over from a six-axis arm. The layout is mobile first, since the whole point was running the machine from a phone instead of a fixed panel.",
       ],
     },
     {
       heading: "Controls",
       body: [
-        "The main screen has an on-screen joystick for moving the two axes, a live coordinate readout, and an emergency stop.",
-        "Inputs and outputs are listed with editable labels. A pin named IN3 means nothing to the person holding the phone, so whoever sets the machine up can rename it to whatever that pin is wired to.",
+        "The main screen has an on-screen joystick for the two axes, a live coordinate readout, and an emergency stop.",
+        "Inputs and outputs are listed with editable labels. A pin called IN3 means nothing to the person holding the phone, so whoever sets the machine up can rename it to whatever it''s wired to.",
       ],
     },
     {
       heading: "Wrong Wi-Fi, no error",
       body: [
-        "The app talks to the machine over the local network, so a phone on the wrong Wi-Fi simply fails to connect with no explanation. I added a check that compares the phone's network against the machine's and says so before the operator starts pressing buttons.",
+        "The app talks to the machine over the local network, so a phone on the wrong Wi-Fi just fails to connect with no explanation. I added a check that compares the phone''s network against the machine''s and says so before the operator starts pressing buttons.",
         "The home screen also carries a small notes and todo list, plus a log of recent activity, so what happened on the machine stays next to the controls instead of in a separate notebook.",
       ],
     },
   ],
   gallery: [],
 };
-
