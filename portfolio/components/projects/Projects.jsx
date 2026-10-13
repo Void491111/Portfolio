@@ -8,7 +8,7 @@ import { PROJECTS_SECTION } from "@/config/site";
 export default function Projects() {
   return (
     <section id="projects" className="px-4 py-16 sm:px-8 sm:py-24">
-      <div className="mx-auto max-w-5xl">
+      <div className="mx-auto max-w-5xl xl:max-w-6xl">
         <Reveal>
           <SectionLabel>{PROJECTS_SECTION.label}</SectionLabel>
           <h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-5xl">{PROJECTS_SECTION.heading}</h2>
@@ -29,3 +29,4 @@ export default function Projects() {
     </section>
   );
 }
+

@@ -7,7 +7,7 @@ import { INTRO } from "@/config/site";
 export default function Intro() {
   return (
     <section id="about" className="px-4 pb-16 pt-4 sm:px-8 lg:py-32">
-      <div className="mx-auto grid max-w-5xl gap-10 sm:gap-12 lg:grid-cols-[1.2fr_1fr] lg:items-start">
+      <div className="mx-auto grid max-w-5xl gap-10 sm:gap-12 xl:max-w-6xl lg:grid-cols-[1.2fr_1fr] lg:items-start">
         <div>
           <Reveal><SectionLabel>{INTRO.label}</SectionLabel></Reveal>
           <ScrollRevealText
@@ -22,4 +22,5 @@ export default function Intro() {
     </section>
   );
 }
+
 

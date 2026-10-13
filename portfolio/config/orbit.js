@@ -1,10 +1,11 @@
 ﻿export const ORBIT = {
-  avatar: { src: "/avatar.webp", alt: "Alif Hidayat", size: 132 },
+  avatar: { src: "/avatar.webp", alt: "Alif Hidayat", size: 160 },
   rings: [
     {
       id: "inner",
       radius: 118,
       radiusSm: 68,
+      radiusXl: 140,
       duration: "52s",
       reverse: false,
       nodes: ["Next.js", "React", "Tailwind"],
@@ -13,6 +14,7 @@
       id: "outer",
       radius: 180,
       radiusSm: 116,
+      radiusXl: 214,
       duration: "78s",
       reverse: true,
       nodes: ["TypeScript", "Flutter", "Figma", "Prisma"],

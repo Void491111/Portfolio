@@ -3,7 +3,11 @@
 export default function OrbitRing({ ring }) {
   const spinClass = ring.reverse ? "orbit-ccw" : "orbit-cw";
   const counterClass = ring.reverse ? "orbit-cw" : "orbit-ccw";
-  const vars = { "--orbit-r-sm": ring.radiusSm + "px", "--orbit-r-lg": ring.radius + "px" };
+  const vars = {
+    "--orbit-r-sm": ring.radiusSm + "px",
+    "--orbit-r-lg": ring.radius + "px",
+    "--orbit-r-xl": ring.radiusXl + "px",
+  };
 
   return (
     <span className="orbit-ring absolute inset-0" style={vars}>

@@ -2,7 +2,7 @@
   name: "Alif Hidayat",
   title: "Alif Hidayat — Frontend Developer",
   description: "Frontend developer from Batam building web and mobile apps.",
-  email: "voidwalker1290@gmail.com",
+  email: "alifsalimmm1@gmail.com",
 };
 
 export const NAV_LINKS = [
@@ -13,9 +13,9 @@ export const NAV_LINKS = [
 
 export const HERO = {
   status: "Open to work",
-  prefix: "I build web and mobile apps for",
-  glitchWord: "real operations",
-  suffix: "cafes, factory floors, counters.",
+  prefix: "I build web and",
+  glitchWord: "mobile apps",
+  suffix: "",
   description:
     "Fresh informatics grad from Batam. So far I've built a point-of-sale for a cafe and a control app for a factory machine.",
   primaryCta: { label: "See projects", href: "#projects" },
@@ -50,6 +50,7 @@ export const SOCIALS = [
   { label: "LinkedIn", href: "https://www.linkedin.com/in/alif-hidayat-salim-109457274" },
   { label: "Instagram", href: "https://www.instagram.com/alifsalim_049" },
 ];
+
 
 
 

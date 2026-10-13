@@ -3,6 +3,13 @@
   heading: "How I got here.",
   items: [
     {
+      id: "smk",
+      year: "2020 - 2023",
+      title: "Multimedia at SMKN 7 Batam",
+      place: "Vocational high school",
+      body: "Where design and editing started for me, years before I wrote any code.",
+    },
+    {
       id: "study",
       year: "2023",
       title: "Started D3 Informatics",
