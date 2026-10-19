@@ -23,7 +23,7 @@ export default function Timeline() {
 
         <div ref={listRef} className="relative mt-14">
           <span aria-hidden className={RAIL_BASE + " bg-neutral-200"} />
-          <motion.span aria-hidden style={{ scaleY: progress }} className={RAIL_BASE + " origin-top bg-gold"} />
+          <motion.span aria-hidden style={{ scaleY: progress }} className={RAIL_BASE + " origin-top bg-neutral-950"} />
           <ol className="space-y-14">
             {TIMELINE.items.map(function renderItem(item, index) {
               return <TimelineItem key={item.id} item={item} delay={index * 0.05} isLeft={index % 2 === 0} />;
@@ -34,4 +34,5 @@ export default function Timeline() {
     </section>
   );
 }
+
 

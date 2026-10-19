@@ -1,6 +1,7 @@
 ﻿"use client";
 import Link from "next/link";
 import NavLinks from "./NavLinks";
+import Mark from "@/components/ui/Mark";
 import { useActiveSection } from "@/hooks/useActiveSection";
 import { useOverDark } from "@/hooks/useOverDark";
 import { NAV_BRAND, NAV_CTA, NAV_LINKS, NAV_SECTION_IDS, NAV_MOTION, NAV_DARK } from "@/config/nav";
@@ -23,7 +24,7 @@ export default function Navbar() {
           aria-label={NAV_BRAND.label}
           className="flex size-8 shrink-0 select-none items-center justify-center rounded-full bg-neutral-950 font-mono text-[11px] font-medium text-white sm:size-9 sm:text-xs"
         >
-          {NAV_BRAND.mark}
+          <Mark variant="solid" className="size-5" />
         </Link>
         <NavLinks links={NAV_LINKS} activeId={activeId} />
         <Link
@@ -37,3 +38,4 @@ export default function Navbar() {
     </div>
   );
 }
+

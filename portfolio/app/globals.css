@@ -230,3 +230,74 @@ html {
 @media (prefers-reduced-motion: reduce) {
   .sheen { animation: none; }
 }
+.mark-cw,
+.mark-ccw {
+  transform-origin: 60px 60px;
+  transform-box: view-box;
+}
+
+.mark-cw { animation: mark-spin var(--mark-duration) linear infinite; }
+.mark-ccw { animation: mark-spin-reverse var(--mark-duration) linear infinite; }
+
+@keyframes mark-spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes mark-spin-reverse {
+  to { transform: rotate(-360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mark-cw,
+  .mark-ccw { animation: none; }
+}
+.cursor-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 70;
+  pointer-events: none;
+  mix-blend-mode: difference;
+}
+
+.cursor-core,
+.cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  will-change: transform;
+  transition: opacity 0.25s ease, width 0.3s ease, height 0.3s ease, border-width 0.3s ease;
+}
+
+.cursor-core {
+  width: 7px;
+  height: 7px;
+  background: #ffffff;
+  clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+}
+
+.cursor-ring {
+  width: 28px;
+  height: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 999px;
+}
+
+.cursor-core[data-visible="true"],
+.cursor-ring[data-visible="true"] { opacity: 1; }
+
+.cursor-core[data-over="true"] { width: 5px; height: 5px; }
+
+.cursor-ring[data-over="true"] {
+  width: 46px;
+  height: 46px;
+  border-color: rgba(255, 255, 255, 0.85);
+}
+
+@media (hover: none), (pointer: coarse) {
+  .cursor-layer { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cursor-layer { display: none; }
+}

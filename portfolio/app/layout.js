@@ -1,5 +1,6 @@
 ﻿import { Geist, Geist_Mono } from "next/font/google";
 import Navbar from "@/components/layout/Navbar";
+import CursorOrbit from "@/components/ui/CursorOrbit";
 import { SITE } from "@/config/site";
 import "./globals.css";
 
@@ -13,8 +14,10 @@ export default function RootLayout({ children }) {
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
       <body className="bg-canvas font-sans text-neutral-950 antialiased">
         <Navbar />
+        <CursorOrbit />
         {children}
       </body>
     </html>
   );
 }
+
