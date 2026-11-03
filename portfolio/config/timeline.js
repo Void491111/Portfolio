@@ -47,9 +47,9 @@
     {
       id: "success-intl",
       year: "2026",
-      title: "Freelance rebuild for Success International",
+      title: "Freelance build for Success International",
       place: "Remote",
-      body: "Moved a consulting firm off WordPress onto Wix Studio, 13 pages matched to the original, with the hero animation and counters written by hand in Velo.",
+      body: "Built a consulting firm's 13-page site from scratch in Wix Studio, with the hero animation and counters written by hand in Velo.",
     },
     {
       id: "now",

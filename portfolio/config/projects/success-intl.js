@@ -7,12 +7,12 @@ export const SUCCESS_INTL = {
   role: "Freelance build",
   layout: "default",
   summary:
-    "A consulting firm's WordPress site rebuilt on Wix Studio, matched section by section, with the animation and counters written by hand in Velo.",
+    "A consulting firm's 13-page site, built from scratch in Wix Studio to match a design that was already fixed, with the animation and counters written by hand in Velo.",
   stack: ["Wix Studio", "Velo", "CSS"],
   cover: IMG + "home-hero.webp",
   links: [],
   highlights: [
-    "13 pages rebuilt from scratch, not imported",
+    "13 pages built by hand, nothing imported",
     "Hero and counter animation written in Velo",
     "Chinese and English from the same pages",
   ],
@@ -21,7 +21,7 @@ export const SUCCESS_INTL = {
       heading: "Why they left WordPress",
       body: [
         "Success International is a management consulting firm in Taiwan that certifies companies against ISO and ESG standards. Their site ran on WordPress, and the plugins it depended on had turned into a maintenance problem.",
-        "The decision was to move the whole thing to Wix Studio, where the client could keep editing it without a developer on retainer.",
+        "The decision was to move the whole thing to Wix Studio, where the client could keep editing it without a developer on retainer. There is no importer between the two, so none of it carried over. Every page, section and component was built from scratch.",
       ],
       image: { src: IMG + "home-hero.webp", caption: "The rebuilt homepage" },
     },
