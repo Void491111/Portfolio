@@ -21,7 +21,7 @@ const CTA =
 
 export default function Navbar() {
   const activeId = useActiveSection(NAV_SECTION_IDS, NAV_MOTION.activeRootMargin);
-  const isOverDark = useOverDark(NAV_DARK.selector, NAV_DARK.rootMargin);
+  const isOverDark = useOverDark(NAV_DARK.selector, NAV_DARK.offset);
   const isScrolled = useScrolled(NAV_SCROLL.threshold);
   const scrolledFlag = isScrolled ? "true" : undefined;
 

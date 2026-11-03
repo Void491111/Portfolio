@@ -17,7 +17,7 @@ export const HERO = {
   glitchWord: "mobile apps",
   suffix: "",
   description:
-    "Fresh informatics grad from Batam. So far I've built a point-of-sale for a cafe and a control app for a factory machine.",
+    "I finished my informatics diploma in Batam this year, so most of what I know comes from coursework, an internship, and a few projects I kept working on after they had already been graded. What keeps pulling me back is the screen someone has to use while they are busy \u2014 a counter in the middle of a rush, a machine on a production line \u2014 where being unclear costs them time. I am looking for a frontend team where I can learn from people who know more than I do, on work that ends up in front of real users.",
   primaryCta: { label: "See projects", href: "#projects" },
   secondaryCta: { label: "Get in touch", href: "#contact" },
 };

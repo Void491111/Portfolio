@@ -17,7 +17,7 @@ export const NAV_MOTION = {
 
 export const NAV_DARK = {
   selector: ".panel-dark",
-  rootMargin: "0px 0px -88% 0px",
+  offset: 68,
 };
 
 export const NAV_SCROLL = { threshold: 24 };
