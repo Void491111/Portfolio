@@ -45,6 +45,13 @@
       body: "A full remake that covers a whole shift: counter, kitchen queue, stock, cash closing and reports.",
     },
     {
+      id: "success-intl",
+      year: "2026",
+      title: "Freelance rebuild for Success International",
+      place: "Remote",
+      body: "Moved a consulting firm off WordPress onto Wix Studio, 13 pages matched to the original, with the hero animation and counters written by hand in Velo.",
+    },
+    {
       id: "now",
       year: "Now",
       title: "Open to work",
