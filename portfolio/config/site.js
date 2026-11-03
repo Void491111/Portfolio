@@ -2,7 +2,7 @@
   name: "Alif Hidayat",
   title: "Alif Hidayat — Frontend Developer",
   description: "Frontend developer from Batam building web and mobile apps.",
-  email: "alifsali3794@gmail.com",
+  email: "alifsalim3749@gmail.com",
 };
 
 export const NAV_LINKS = [
