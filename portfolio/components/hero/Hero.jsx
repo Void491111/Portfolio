@@ -23,7 +23,7 @@ export default function Hero() {
           </Reveal>
 
           <Reveal delay={0.15}>
-            <p className="mt-6 max-w-xl text-neutral-600 sm:text-lg xl:text-xl">{HERO.description}</p>
+            <p className="mt-6 max-w-xl text-justify hyphens-auto text-neutral-600 sm:text-lg xl:text-xl">{HERO.description}</p>
           </Reveal>
 
           <Reveal delay={0.25} className="mt-7 flex flex-wrap items-center gap-x-6 gap-y-3 sm:mt-8">
