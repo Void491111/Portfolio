@@ -301,3 +301,23 @@ html {
 @media (prefers-reduced-motion: reduce) {
   .cursor-layer { display: none; }
 }
+
+.nav-shell,
+.nav-pill {
+  transition-property: padding-top, height, max-width, background, border-color, box-shadow, backdrop-filter;
+  transition-duration: 0.5s;
+  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.nav-pill:not([data-scrolled="true"]) {
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-shell,
+  .nav-pill { transition: none; }
+}
