@@ -6,7 +6,7 @@ import { HERO } from "@/config/site";
 
 export default function Hero() {
   return (
-    <section className="relative flex min-h-[78svh] items-center overflow-hidden px-4 py-20 sm:px-8 lg:min-h-svh lg:py-0">
+    <section className="relative flex min-h-[78svh] items-center overflow-hidden px-4 pb-20 pt-28 sm:px-8 sm:pt-32 lg:min-h-svh lg:pb-24 lg:pt-36">
       <DotBackground />
       <div className="relative mx-auto grid w-full max-w-5xl gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center xl:max-w-6xl xl:gap-20">
         <div>

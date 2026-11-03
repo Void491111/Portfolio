@@ -1,5 +1,6 @@
 ﻿import Hero from "@/components/hero/Hero";
 import Intro from "@/components/intro/Intro";
+import TechStack from "@/components/stack/TechStack";
 import Timeline from "@/components/timeline/Timeline";
 import Projects from "@/components/projects/Projects";
 import Contact from "@/components/contact/Contact";
@@ -9,6 +10,7 @@ export default function HomePage() {
     <main>
       <Hero />
       <Intro />
+      <TechStack />
       <Timeline />
       <Projects />
       <Contact />
