@@ -1,54 +1,54 @@
 import { GITHUB } from "@/config/github";
 
-const EVENTS =
-  GITHUB.api + "/users/" + GITHUB.user + "/events/public?per_page=" + GITHUB.perPage;
-
 const HEADERS = {
   Accept: "application/vnd.github+json",
   "X-GitHub-Api-Version": "2022-11-28",
 };
 
-function isPush(event) {
-  return event.type === "PushEvent";
-}
-
-function isVisible(event) {
-  return !GITHUB.hideRepos.includes(event.repo.name);
-}
-
 function firstLine(message) {
   return message.split("\n")[0];
 }
 
-function toCommits(event) {
-  const commits = event.payload.commits || [];
-  return commits
-    .filter(function isDistinct(commit) {
-      return commit.distinct;
-    })
-    .reverse()
-    .map(function toRow(commit) {
-      return {
-        sha: commit.sha,
-        message: firstLine(commit.message),
-        repo: event.repo.name.split("/")[1],
-        date: event.created_at,
-        url: "https://github.com/" + event.repo.name + "/commit/" + commit.sha,
-      };
-    });
+function commitsUrl(repo) {
+  return (
+    GITHUB.api +
+    "/repos/" +
+    repo +
+    "/commits?author=" +
+    GITHUB.user +
+    "&per_page=" +
+    GITHUB.perRepo
+  );
 }
 
-export async function getCommits() {
+async function fetchRepo(repo) {
   try {
-    const res = await fetch(EVENTS, {
+    const res = await fetch(commitsUrl(repo), {
       headers: HEADERS,
       next: { revalidate: GITHUB.revalidate },
     });
     if (!res.ok) return [];
-    const events = await res.json();
-    if (!Array.isArray(events)) return [];
-    return events.filter(isPush).filter(isVisible).flatMap(toCommits).slice(0, GITHUB.limit);
+    const rows = await res.json();
+    if (!Array.isArray(rows)) return [];
+    return rows.map(function toRow(item) {
+      return {
+        sha: item.sha,
+        message: firstLine(item.commit.message),
+        repo: repo.split("/")[1],
+        date: item.commit.author.date,
+        url: item.html_url,
+      };
+    });
   } catch (error) {
     return [];
   }
+}
+
+function byNewest(a, b) {
+  return new Date(b.date) - new Date(a.date);
+}
+
+export async function getCommits() {
+  const lists = await Promise.all(GITHUB.repos.map(fetchRepo));
+  return lists.flat().sort(byNewest).slice(0, GITHUB.limit);
 }
