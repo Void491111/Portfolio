@@ -3,6 +3,7 @@ import Intro from "@/components/intro/Intro";
 import TechStack from "@/components/stack/TechStack";
 import Timeline from "@/components/timeline/Timeline";
 import Projects from "@/components/projects/Projects";
+import Activity from "@/components/activity/Activity";
 import Contact from "@/components/contact/Contact";
 
 export default function HomePage() {
@@ -13,6 +14,7 @@ export default function HomePage() {
       <TechStack />
       <Timeline />
       <Projects />
+      <Activity />
       <Contact />
     </main>
   );
